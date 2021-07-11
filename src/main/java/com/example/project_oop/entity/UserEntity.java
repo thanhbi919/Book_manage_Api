@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Getter @Setter
 @Entity
@@ -25,5 +26,12 @@ public class UserEntity {
 
     @Column(name = "role")
     private String role;
+
+    @Column(name = "expired_time")
+    private Timestamp expiredTime;
+
+    @Column(name = "token")
+    private String token;
+
 
 }

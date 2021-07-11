@@ -13,7 +13,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,9 +55,9 @@ public class UserService implements UserDetailsService , CheckValidInput {
 
         return userDetails;
     }
-
     @Override
     public int checkEmail(String email) {
+        String x ="(\\b)";
         if(email.endsWith("email")==true){
             return 1;
         }else

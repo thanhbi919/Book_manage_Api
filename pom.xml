@@ -14,7 +14,7 @@
     <name>project_oop</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-        <java.version>16</java.version>
+        <java.version>8</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -26,7 +26,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

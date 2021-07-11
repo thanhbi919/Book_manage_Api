@@ -21,14 +21,14 @@ public class SecurityController {
     return "welcome";
 }
 
-    @GetMapping("/userInfo")
-    public String userInfo(Model model, Principal principal){
-        String userName = principal.getName();
-        User loginUser =(User) ((Authentication) principal).getPrincipal();
-        String userInfo = loginUser.toString();
-        model.addAttribute("userInfo", userInfo);
-        return "userinfo";
-    }
+//    @GetMapping("/userInfo")
+//    public String userInfo(Model model, Principal principal){
+//        String userName = principal.getName();
+//        User loginUser =(User) ((Authentication) principal).getPrincipal();
+//        String userInfo = loginUser.toString();
+//        model.addAttribute("userInfo", userInfo);
+//        return "userinfo";
+//    }
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String adminPage(Model model, Principal principal) {
@@ -43,7 +43,7 @@ public class SecurityController {
     }
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginPage(Model model) {
-        return "index";
+        return "login";
     }
 
     @RequestMapping(value = "/logoutSuccessful", method = RequestMethod.GET)
